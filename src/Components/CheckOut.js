@@ -47,7 +47,7 @@ function CheckOut({ fetchCartData }) {
   const order = ()=>{
     cartList.forEach((pro)=>{
       let orderDetails={...pro,address,buyNow:false}
-      axios.post('http://localhost:8000/new/order',orderDetails,{
+      axios.post('https://demonode-ffs6.onrender.com/new/order',orderDetails,{
         headers:{
           Authorization:localStorage.getItem('myapptoken')
         }
@@ -69,7 +69,7 @@ function CheckOut({ fetchCartData }) {
   const buyNowOrder = ()=>{
     let client = JSON.parse(localStorage.getItem('userData'))._id
     let orderDetails={...buyNow,address,buyNow:true,client:client}
-    axios.post('http://localhost:8000/new/order',orderDetails,{
+    axios.post('https://demonode-ffs6.onrender.com/new/order',orderDetails,{
         headers:{
           Authorization:localStorage.getItem('myapptoken')
         }

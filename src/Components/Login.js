@@ -24,7 +24,7 @@ function Login({toggleSignUp,closeLogin}) {
             ...list,
             client:JSON.parse(localStorage.getItem('userData'))._id
           }
-          axios.post('http://localhost:8000/new/cart',newCart).then((res)=>{
+          axios.post('https://demonode-ffs6.onrender.com/new/cart',newCart).then((res)=>{
             if(res.data.status===1){
               toast.success(res.data.message)
             }
@@ -51,7 +51,7 @@ function Login({toggleSignUp,closeLogin}) {
         return toast.error("Password Required")
       }
   
-      axios.post('http://localhost:8000/user/login',login).then((res)=>{
+      axios.post('https://demonode-ffs6.onrender.com/user/login',login).then((res)=>{
         if(res.data.status===1){
           toast.success(res.data.message)
           console.log(res.data.token)

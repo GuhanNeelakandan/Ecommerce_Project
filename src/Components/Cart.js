@@ -43,7 +43,7 @@ function Cart({fetchCartData,fetchLocalCart}) {
   const totalAmount = cartList?.reduce((pre,curr)=>pre+curr.offerPrice,0).toFixed(2)//0+36000= 36000+38000 =900000+50000
   const RemoveCart = (id,i)=>{
     if(localStorage.getItem('myapptoken')){
-      axios.post(`http://localhost:8000/delete/cart`,{id:id}).then((res)=>{
+      axios.post(`https://demonode-ffs6.onrender.com/delete/cart`,{id:id}).then((res)=>{
         toast.success("Cart Item Removed")
         fetchCartData()
       })

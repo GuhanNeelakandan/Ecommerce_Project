@@ -24,7 +24,7 @@ function Products({cartData,setCartData}) {
 
   const fetchAllProducts = () => {
     axios
-      .post("http://localhost:8000/all/product")
+      .post("https://demonode-ffs6.onrender.com/all/product")
       .then((res) => {
         console.log(res)
         setLoading(false)
@@ -48,7 +48,7 @@ function Products({cartData,setCartData}) {
 
       console.log(newCart)
       //login
-      axios.post('http://localhost:8000/new/cart',newCart).then((res)=>{
+      axios.post('https://demonode-ffs6.onrender.com/new/cart',newCart).then((res)=>{
         if(res.data.status===1){
           toast.success(res.data.message)
           setCartData([...cartData,newCart])
@@ -81,7 +81,7 @@ function Products({cartData,setCartData}) {
   };
 
   const submitProduct =()=>{
-    axios.post('http://localhost:8000/new/product',newProduct,{
+    axios.post('https://demonode-ffs6.onrender.com/new/product',newProduct,{
       headers:{
         Authorization:localStorage.getItem('myapptoken')
       }
@@ -108,7 +108,7 @@ function Products({cartData,setCartData}) {
   }
 
   const deleteProduct=()=>{
-    axios.post('http://localhost:8000/delete/product',{id:deleteId},{
+    axios.post('https://demonode-ffs6.onrender.com/delete/product',{id:deleteId},{
       headers:{
         Authorization:localStorage.getItem('myapptoken')
       }

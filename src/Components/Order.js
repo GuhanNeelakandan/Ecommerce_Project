@@ -9,9 +9,9 @@ function Order() {
     const fetchOrderList = ()=>{
       let url =""
       if(user?.role==='admin'){
-        url='http://localhost:8000/admin/all/order'
+        url='https://demonode-ffs6.onrender.com/admin/all/order'
       }else{
-        url='http://localhost:8000/all/order'
+        url='https://demonode-ffs6.onrender.com/all/order'
       }
       axios.post(url,{},{
         headers:{

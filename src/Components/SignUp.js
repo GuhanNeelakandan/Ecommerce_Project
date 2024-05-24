@@ -32,7 +32,7 @@ function SignUp({toggleLogin}) {
           return toast.error("Password Required")
         }
     
-        axios.post('http://localhost:8000/user/signup',user).then((res)=>{
+        axios.post('https://demonode-ffs6.onrender.com/user/signup',user).then((res)=>{
           if(res.data.status===1){
             toast.success(res.data.message)
             toggleLogin()
