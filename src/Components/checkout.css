@@ -1,0 +1,22 @@
+.left-cart{
+    border: 1px solid black;
+
+}
+
+.cart-list{
+    display: flex;
+}
+
+.cart-img{
+    width: 100px;
+    height: 100px;
+}
+
+.pay-btn{
+    background-color: #0f7124;
+    color: white;
+    padding: 8px 100px;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 5px;
+}
